@@ -12,3 +12,6 @@ LazyData: true
 URL: https://github.com/adrtod/rfastFM
 BugReports: https://github.com/adrtod/rfastFM/issues
 SystemRequirements: GNU make, libopenblas-dev
+LinkingTo: Rcpp
+Imports: Rcpp
+RoxygenNote: 6.0.1

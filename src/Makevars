@@ -1,4 +1,24 @@
-SOURCES = $(wildcard *.c fastFM-core/src/*.c CXSparse/Source/*.c)
-OBJECTS = $(SOURCES:.c=.o)
-PKG_CPPFLAGS = -I/usr/include/openblas/ -ICXSparse/Include -IfastFM-core/include
-PKG_LIBS = -lopenblas -lm
+
+PKG_CPPFLAGS = -I/usr/include/openblas/  -ICXSparse/SuiteSparse_config -ICXSparse/Include -IfastFM-core/include
+
+PKG_CXXFLAGS = `${R_HOME}/bin/Rscript -e "Rcpp:::CxxFlags()"`
+
+PKG_LIBS = `${R_HOME}/bin/Rscript -e "Rcpp:::LdFlags()"` -lopenblas -lm
+
+CS_SOURCES = $(filter-out CXSparse/Source/cs_convert.c, $(wildcard *.c CXSparse/Source/*.c))
+
+FM_SOURCES = $(wildcard *.c fastFM-core/src/*.c)
+
+OBJECTS = $(FM_SOURCES:.c=.o) CXSparse/Source/cs_convert_di.o $(CS_SOURCES:.c=_di.o) $(CS_SOURCES:.c=_dl.o) $(CS_SOURCES:.c=_ci.o) $(CS_SOURCES:.c=_cl.o)
+
+CXSparse/Source/%_di.o : CXSparse/Source/%.c
+	$(CC) -I$(R_INCLUDE_DIR) -DNDEBUG $(PKG_CPPFLAGS) $(PKG_CXXFLAGS) $(CPICFLAGS) $(CFLAGS) $(CPICFLAGS) -c $< -o $@
+
+CXSparse/Source/%_dl.o : CXSparse/Source/%.c
+	$(CC) -I$(R_INCLUDE_DIR) -DNDEBUG $(PKG_CPPFLAGS) $(PKG_CXXFLAGS) $(CPICFLAGS) $(CFLAGS) -DCS_LONG -c $< -o $@
+
+CXSparse/Source/%_ci.o : CXSparse/Source/%.c
+	$(CC) -I$(R_INCLUDE_DIR) -DNDEBUG $(PKG_CPPFLAGS) $(PKG_CXXFLAGS) $(CPICFLAGS) $(CFLAGS) -DCS_COMPLEX -c $< -o $@
+
+CXSparse/Source/%_cl.o : CXSparse/Source/%.c
+	$(CC) -I$(R_INCLUDE_DIR) -DNDEBUG $(PKG_CPPFLAGS) $(PKG_CXXFLAGS) $(CPICFLAGS) $(CFLAGS) -DCS_LONG -DCS_COMPLEX -c $< -o $@
