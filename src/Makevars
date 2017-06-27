@@ -1,0 +1,4 @@
+SOURCES = $(wildcard *.c fastFM-core/src/*.c CXSparse/Source/*.c)
+OBJECTS = $(SOURCES:.c=.o)
+PKG_CPPFLAGS = -I/usr/include/openblas/ -ICXSparse/Include -IfastFM-core/include
+PKG_LIBS = -lopenblas -lm

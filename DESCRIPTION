@@ -1,0 +1,14 @@
+Package: rfastFM
+Type: Package
+Title: Interface to the fastFM library
+Version: 0.1.0
+Authors@R: person("Adrien", "Todeschini", email = "adrien.todeschini@gmail.com", role = c("aut", "cre"))
+Maintainer: Adrien Todeschini <adrien.todeschini@gmail.com>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: GPL-3 + FILE src/fastFM-core/Copying
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/adrtod/rfastFM
+BugReports: https://github.com/adrtod/rfastFM/issues
+SystemRequirements: GNU make, libopenblas-dev

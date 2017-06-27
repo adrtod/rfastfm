@@ -1,0 +1,6 @@
+[submodule "src/fastFM-core"]
+	path = src/fastFM-core
+	url = https://github.com/adrtod/fastFM-core
+[submodule "src/CXSparse"]
+	path = src/CXSparse
+	url = git@github.com:ibayer/CXSparse.git
