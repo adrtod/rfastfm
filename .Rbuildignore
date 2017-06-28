@@ -4,7 +4,7 @@
 ^.*\.o$
 ^src/fastFM-core/\.git$
 ^src/fastFM-core/\.travis\.yml$
-^src/CXSparse/\.git$
+^src/fastFM-core/externals/CXSparse/\.git$
 ^docs$
 ^\.travis\.yml$
 

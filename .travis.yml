@@ -8,3 +8,7 @@ language: R
 sudo: false
 cache: packages
 warnings_are_errors: false
+
+before_install:
+  - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt-get -qq update; fi
+  - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt-get install -y liopenblas-dev; else brew install liopenblas-dev; fi
