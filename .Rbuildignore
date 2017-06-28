@@ -7,3 +7,5 @@
 ^src/CXSparse/\.git$
 ^docs$
 ^\.travis\.yml$
+
+^src/fastFM-core/externals/OpenBLAS$

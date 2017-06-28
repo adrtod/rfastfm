@@ -9,10 +9,12 @@ Interface to the fastFM library
 
 You can install rfastFM from github with:
 
-
 ``` r
-# install.packages("devtools")
-devtools::install_github("adrtod/rfastFM")
+if (!require("devtools"))
+  install.packages("devtools")
+install_dir <- file.path(tempdir(), "rfastFM")
+system(paste("git clone --recursive", shQuote("https://github.com/adrtod/rfastFM.git"), shQuote(install_dir)))
+devtools::install(install_dir)
 ```
 
 ## Example
