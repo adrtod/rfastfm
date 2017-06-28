@@ -37,6 +37,9 @@
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
+<li>
+  <a href="news/index.html">News</a>
+</li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
@@ -59,13 +62,17 @@
     <div id="rfastfm" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#rfastfm" class="anchor"></a>rfastFM</h1></div>
+
 <p>Interface to the fastFM library</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install rfastFM from github with:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages("devtools")</span>
-devtools::<span class="kw">install_github</span>(<span class="st">"adrtod/rfastFM"</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">if (!<span class="kw">require</span>(<span class="st">"devtools"</span>))
+  <span class="kw">install.packages</span>(<span class="st">"devtools"</span>)
+install_dir &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="kw">tempdir</span>(), <span class="st">"rfastFM"</span>)
+<span class="kw">system</span>(<span class="kw">paste</span>(<span class="st">"git clone --recursive"</span>, <span class="kw">shQuote</span>(<span class="st">"https://github.com/adrtod/rfastFM.git"</span>), <span class="kw">shQuote</span>(install_dir)))
+devtools::<span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install">install</a></span>(install_dir)</code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
@@ -85,10 +92,19 @@ devtools::<span class="kw">install_github</span>(<span class="st">"adrtod/rfastF
 </li>
 </ul>
 <h2>License</h2>
-<p><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a> + FILE src/fastFM-core/Copying</p>
+<p><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a> + FILE src/fastFM-core/COPYING</p>
+<h2>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html">Citing rfastFM</a></li>
+</ul>
 <h2>Developers</h2>
 <ul class="list-unstyled">
 <li>Adrien Todeschini <br><small class="roles"> Author, maintainer </small> </li>
+</ul>
+<h2>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://travis-ci.org/adrtod/rfastFM"><img src="https://travis-ci.org/adrtod/rfastFM.svg?branch=master" alt="Travis-CI Build Status"></a></li>
+<li><a href="https://cran.r-project.org/package=rfastFM"><img src="http://www.r-pkg.org/badges/version/rfastFM" alt="CRAN_Status_Badge"></a></li>
 </ul>
 </div>
 </div>
