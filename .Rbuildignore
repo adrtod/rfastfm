@@ -2,7 +2,8 @@
 ^\.Rproj\.user$
 
 ^.*\.o$
-
 ^src/fastFM-core/\.git$
 ^src/fastFM-core/\.travis\.yml$
 ^src/CXSparse/\.git$
+^docs$
+^\.travis\.yml$

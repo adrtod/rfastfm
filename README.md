@@ -1,5 +1,8 @@
 # rfastFM
 
+[![Travis-CI Build Status](https://travis-ci.org/adrtod/rfastFM.svg?branch=master)](https://travis-ci.org/adrtod/rfastFM)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rfastFM)](https://cran.r-project.org/package=rfastFM)
+
 Interface to the fastFM library
 
 ## Installation
