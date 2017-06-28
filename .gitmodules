@@ -1,4 +1,3 @@
 [submodule "src/fastFM-core"]
 	path = src/fastFM-core
-	url = https://github.com/ibayer/fastFM-core.git
-
+	url = https://github.com/adrtod/fastFM-core.git
