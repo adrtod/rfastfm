@@ -1,7 +1,7 @@
 Package: rfastFM
 Type: Package
 Title: Interface to the fastFM library
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: person("Adrien", "Todeschini", email = "adrien.todeschini@gmail.com", role = c("aut", "cre"))
 Maintainer: Adrien Todeschini <adrien.todeschini@gmail.com>
 Description: More about what it does (maybe more than one line)
@@ -9,7 +9,7 @@ Description: More about what it does (maybe more than one line)
 License: GPL-3 + FILE src/fastFM-core/COPYING
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/adrtod/rfastFM
+URL: https://github.com/adrtod/rfastFM, https://adrtod.github.io/rfastFM
 BugReports: https://github.com/adrtod/rfastFM/issues
 SystemRequirements: GNU make, libopenblas-dev
 LinkingTo: Rcpp
