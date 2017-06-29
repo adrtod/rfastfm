@@ -1,4 +1,4 @@
 library(testthat)
-library(rfastFM)
+library(rfastfm)
 
-test_check("rfastFM")
+test_check("rfastfm")

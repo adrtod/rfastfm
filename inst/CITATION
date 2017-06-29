@@ -1,5 +1,5 @@
 bibentry(bibtype = "Article",
-         header = "To cite rfastFM in publications use:",
+         header = "To cite rfastfm in publications use:",
          key = "JMLR:v17:15-355",
          title = "{fastFM}: A Library for Factorization Machines",
          author =  personList(as.person("Immanuel Bayer")),

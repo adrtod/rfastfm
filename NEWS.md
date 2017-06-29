@@ -1,3 +1,3 @@
-# rfastFM 0.1.0.9000
+# rfastfm 0.1.0.9000
 
-* initial release of rfastFM
+* initial release of rfastfm

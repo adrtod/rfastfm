@@ -1,16 +1,21 @@
-Package: rfastFM
+Package: rfastfm
 Type: Package
 Title: Interface to the fastFM library
 Version: 0.1.0.9000
 Authors@R: person("Adrien", "Todeschini", email = "adrien.todeschini@gmail.com", role = c("aut", "cre"))
 Maintainer: Adrien Todeschini <adrien.todeschini@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: rfastfm is an interface to the fastFM library for Factorization 
+  Machines (FM). Though being recognized as being very successful for 
+  recommender system type applications, FMs are a much more general model to 
+  deal with sparse and high dimensional features. The fastFM implementation 
+  provides easy access to many solvers and supports regression, classification 
+  and ranking tasks. Such an implementation simplifies the use of FMs for a 
+  wide range of applications.
 License: GPL-3 + FILE src/fastFM-core/COPYING
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/adrtod/rfastFM, https://adrtod.github.io/rfastFM
-BugReports: https://github.com/adrtod/rfastFM/issues
+URL: https://github.com/adrtod/rfastfm, https://adrtod.github.io/rfastfm
+BugReports: https://github.com/adrtod/rfastfm/issues
 SystemRequirements: GNU make, libopenblas-dev
 LinkingTo: Rcpp
 Imports: Rcpp

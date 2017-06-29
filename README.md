@@ -1,9 +1,9 @@
-# rfastFM
+# rfastfm
 
 [![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
-[![Travis-CI Build Status](https://travis-ci.org/adrtod/rfastFM.svg?branch=master)](https://travis-ci.org/adrtod/rfastFM)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rfastFM)](https://cran.r-project.org/package=rfastFM)
-[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/rfastFM)](http://www.r-pkg.org/pkg/rfastFM)
+[![Travis-CI Build Status](https://travis-ci.org/adrtod/rfastfm.svg?branch=master)](https://travis-ci.org/adrtod/rfastfm)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rfastfm)](https://cran.r-project.org/package=rfastfm)
+[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/rfastfm)](http://www.r-pkg.org/pkg/rfastfm)
 
 Interface to the [fastFM library](https://github.com/ibayer/fastFM-core/).
 
@@ -17,13 +17,13 @@ System requirements: libopenblas-dev
 sudo apt-get install libopenblas-dev
 ```
 
-You can install rfastFM from github with:
+You can install rfastfm from github with:
 
 ``` r
 if (!require("devtools"))
   install.packages("devtools")
-install_dir <- file.path(tempdir(), "rfastFM")
-system(paste("git clone --recursive", shQuote("https://github.com/adrtod/rfastFM.git"), shQuote(install_dir)))
+install_dir <- file.path(tempdir(), "rfastfm")
+system(paste("git clone --recursive", shQuote("https://github.com/adrtod/rfastfm.git"), shQuote(install_dir)))
 devtools::install(install_dir)
 ```
 
